@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Roulette</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="app-bg">
+    <div class="container py-5">
+      <h3 class="text-center mb-4">Daily Roulette</h3>
+
+      <div class="wheel-wrap mx-auto">
+        <div class="left-panel text-center">
+          <div class="pointer-wrap mb-3">
+            <div class="pointer" aria-hidden="true"></div>
+          </div>
+
+          <div class="wheel" id="wheel" aria-hidden="true">
+            <div class="labels" id="labels"></div>
+            <div class="center" id="centerBtn">SPIN</div>
+          </div>
+        </div>
+
+        <div class="right-panel d-flex flex-column ms-4">
+          <label class="form-label mb-1"><strong>Opcions</strong></label>
+          <textarea id="options" class="form-control mb-3" rows=6">
+            DATROXE 🥀
+            BEAT 🎶
+            GHOST 👻
+            CONTENT 🎥
+            SOUND DESING🎛️
+            FREE 🎮
+
+          </textarea>
+
+          <div class="d-grid gap-2 mb-3">
+            <button id="spinBtn" class="btn btn-primary">Spin</button>
+            <button id="randomizeBtn" class="btn btn-outline-secondary">Generartor</button>
+          </div>
+
+          <div class="result-badge mt-2">
+            <div><strong>Result</strong></div>
+            <div id="result" class="fs-5 text-muted">
+              <h4 class="text-dark-emphasis">
+                ...
+              </h4></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="text-center mt-4 text-muted small">
+        <h4 class="text-dark-emphasis">
+          Presiona Espacio para girar
+        </h4>
+      </div>-->
+
+  <!-- Modal ganador (Bootstrap) -->
+  <div class="modal fade" id="winnerModal" tabindex="-1" aria-labelledby="winnerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header border-0">
+          <h5 class="modal-title w-100 text-black" id="winnerModalLabel">To Do:</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="display-6 fw-bold text-black" id="winnerText">Premio X</div>
+          <p class="text-muted mt-2" id="winnerSub">🔥🔥🔥🔥</p>
+        </div>
+        <div class="modal-footer border-0 justify-content-center pb-4">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Acept</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS (Popper incluido) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
