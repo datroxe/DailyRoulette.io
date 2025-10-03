@@ -80,7 +80,7 @@ function spin(){
   if(isSpinning) return;
   if(sectors.length === 0) return;
   isSpinning = true;
-  resultDisplay.textContent = 'Girando...';
+  resultDisplay.textContent = 'Spinning...';
 
   const extraTurns = Math.floor(Math.random() * 4) + 5; // 5..8 vueltas
   const randomOffset = Math.random() * 360;
