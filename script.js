@@ -48,10 +48,13 @@ function renderWheel(){
   for(let i=0;i<n;i++){
     const el = document.createElement('div');
     el.className = 'sector';
+    // La rotación inicial posiciona el sector. 0deg está a la derecha.
     const rotate = i * anglePer;
     el.style.transform = `rotate(${rotate}deg) translate(-50%,-50%)`;
     const inner = document.createElement('div');
-    inner.style.transform = `rotate(${anglePer/2}deg)`;
+    
+    // CORRECCIÓN: 90 grados para que el texto apunte hacia afuera y sea legible
+    inner.style.transform = `rotate(90deg)`; 
     inner.textContent = sectors[i] || `Opción ${i+1}`;
     el.appendChild(inner);
     labelsContainer.appendChild(el);
@@ -114,3 +117,4 @@ optionsInput.addEventListener('input', generateSectors);
 
 // Inicial
 generateSectors();
+
